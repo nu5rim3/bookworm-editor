@@ -45,7 +45,7 @@ export default function UserAuthCreateForm() {
   const navigate = useNavigate();
   const dispatch: AppDispatch = useDispatch();
   const { toast } = useToast();
-  const [showOTP, setShowOTP] = useState(true);
+  const [showOTP, setShowOTP] = useState(false);
 
   const defaultValues = {
     name: "",
@@ -108,7 +108,7 @@ export default function UserAuthCreateForm() {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="w-full space-y-2">
+            className="flex flex-col gap-2">
 
             <FormField
               control={form.control}
@@ -166,15 +166,15 @@ export default function UserAuthCreateForm() {
                 </FormItem>
               )}
             />
-
-            <Button
-              disabled={status === 'loading'}
-              loading={status === 'loading'}
-              className="ml-auto w-full"
-              type="submit">
-              Create Account
-            </Button>
-
+            <div className="mt-5">
+              <Button
+                disabled={status === 'loading'}
+                loading={status === 'loading'}
+                className="ml-auto w-full"
+                type="submit">
+                Create Account
+              </Button>
+            </div>
           </form>
         </Form>
       )}
