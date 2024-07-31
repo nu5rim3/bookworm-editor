@@ -107,6 +107,7 @@ const Navigation = () => {
             </div>
             <Nav
                 isCollapsed={!isMinimized}
+                setIsMinimized={setIsMinimized}
                 links={[
                     {
                         title: "Dashboard",

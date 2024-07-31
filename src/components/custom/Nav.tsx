@@ -6,6 +6,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/
 
 interface NavProps {
     isCollapsed: boolean
+    setIsMinimized: () => void
     links: {
         title: string
         label?: string
@@ -15,7 +16,7 @@ interface NavProps {
     }[]
 }
 
-export function Nav({ links, isCollapsed }: NavProps) {
+export function Nav({ links, isCollapsed, setIsMinimized }: NavProps) {
 
     const location = useLocation();
     const pathname = location.pathname;
@@ -38,6 +39,7 @@ export function Nav({ links, isCollapsed }: NavProps) {
                                             buttonVariants({ variant: pathname === link.path ? 'default' : 'ghost', size: "sm" }),
                                             "justify-start"
                                         )}
+                                        onClick={setIsMinimized}
                                     >
                                         <link.icon className="h-5 w-5" />
                                     </Link>
@@ -52,7 +54,7 @@ export function Nav({ links, isCollapsed }: NavProps) {
                             </Tooltip>
                         </TooltipProvider>
                     ) : (
-                        <Link to={link.path}>
+                        <Link to={link.path} onClick={setIsMinimized}>
                             <a
                                 key={index}
                                 href="#"
