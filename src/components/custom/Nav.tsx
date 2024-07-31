@@ -39,7 +39,6 @@ export function Nav({ links, isCollapsed, setIsMinimized }: NavProps) {
                                             buttonVariants({ variant: pathname === link.path ? 'default' : 'ghost', size: "sm" }),
                                             "justify-start"
                                         )}
-                                        onClick={setIsMinimized}
                                     >
                                         <link.icon className="h-5 w-5" />
                                     </Link>
