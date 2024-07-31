@@ -36,7 +36,7 @@ const svgVariants = {
 }
 
 const Navigation = () => {
-    const { theme, toggleTheme, isMinimized, setIsMinimized } = useTheme()
+    const { isMinimized, setIsMinimized } = useTheme()
 
     const containerControls = useAnimationControls()
     const svgControls = useAnimationControls()
@@ -152,9 +152,6 @@ const Navigation = () => {
                     },
                 ]}
             />
-            {/* <div className='flex flex-1 justify-center items-end'>
-                <Button onClick={toggleTheme} variant={'ghost'}>{theme === 'dark' ? <Sun /> : <Moon />}</Button>
-            </div> */}
         </motion.aside>
 
     )
