@@ -4,6 +4,9 @@ import { useEffect } from 'react'
 import { Nav } from './Nav'
 import { Button } from '../ui/button'
 import { useTheme } from '../../context/themeProvider'
+import fullLogoW from '../../assets/Group 7.png';
+import fullLogo from '../../assets/Group 10.png';
+import smallLogo from '../../assets/Group 12.png';
 
 const containerVariants = {
     close: {
@@ -90,11 +93,16 @@ const Navigation = () => {
                 </button>
             </div>
 
-            <div className='flex justify-center px-2'>
+            <div className='flex justify-center px-2 whitespace-nowrap'>
                 {isMinimized ?
-                    <div className="w-full h-10 bg-gradient-to-br from-orange-500 to-amber-700 rounded flex justify-center items-center">BookWorm</div>
+                    <>
+                        <img src={fullLogo} className='dark:hidden' />
+                        <img src={fullLogoW} className='hidden dark:block' />
+                    </>
                     :
-                    <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-amber-700 rounded-full flex justify-center items-center">BW</div>
+                    <div className="w-10 h-10">
+                        <img src={smallLogo} />
+                    </div>
                 }
             </div>
             <Nav
