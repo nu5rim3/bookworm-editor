@@ -29,15 +29,14 @@ export function Nav({ links, isCollapsed, setIsMinimized }: NavProps) {
             <nav className="grid gap-2 px-2 group-[[data-collapsed=true]]:justify-center group-[[data-collapsed=true]]:px-2">
                 {links.map((link, index) =>
                     isCollapsed ? (
-                        <TooltipProvider delayDuration={70}>
+                        <TooltipProvider delayDuration={70} key={index}>
                             <Tooltip>
                                 <TooltipTrigger>
                                     <Link
-                                        key={index}
                                         to={link.path}
                                         className={cn(
                                             buttonVariants({ variant: pathname === link.path ? 'default' : 'ghost', size: "sm" }),
-                                            "justify-start"
+                                            "justify-start rounded-full p-2"
                                         )}
                                     >
                                         <link.icon className="h-5 w-5" />

@@ -1,8 +1,7 @@
 import { motion, useAnimationControls } from 'framer-motion'
-import { LayoutDashboard, User, Settings, BookMarked, LibraryBig, BadgeDollarSign, Sun, Moon } from 'lucide-react'
+import { LayoutDashboard, User, Settings, BookMarked, LibraryBig, BadgeDollarSign } from 'lucide-react'
 import { useEffect } from 'react'
 import { Nav } from './Nav'
-import { Button } from '../ui/button'
 import { useTheme } from '../../context/themeProvider'
 import fullLogoW from '../../assets/Group 7.png';
 import fullLogo from '../../assets/Group 10.png';
@@ -153,9 +152,9 @@ const Navigation = () => {
                     },
                 ]}
             />
-            <div className='flex flex-1 justify-center items-end'>
+            {/* <div className='flex flex-1 justify-center items-end'>
                 <Button onClick={toggleTheme} variant={'ghost'}>{theme === 'dark' ? <Sun /> : <Moon />}</Button>
-            </div>
+            </div> */}
         </motion.aside>
 
     )
