@@ -3,7 +3,7 @@
   "compilerOptions": {
     "composite": true,
     "outDir": "./dist",
-    "noEmit": true
+    "emitDeclarationOnly": true // Use this if you only need declarations
   },
   "include": ["src"]
 }

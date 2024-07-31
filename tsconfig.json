@@ -11,23 +11,17 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-
-    /* Bundler mode */
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "allowImportingTsExtensions": true, // Keep this if you need to import .ts files
     "resolveJsonModule": true,
     "isolatedModules": true,
     "moduleDetection": "force",
     "jsx": "react-jsx",
-
-    /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-
-    /* Emit Options */
-    "noEmit": true // Add this line or use "emitDeclarationOnly": true
+    "emitDeclarationOnly": true // Add this to allow importing TS extensions
   },
   "include": ["src", "vite.config.ts"],
   "references": [

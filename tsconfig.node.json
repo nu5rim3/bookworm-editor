@@ -3,7 +3,7 @@
   "compilerOptions": {
     "composite": true,
     "outDir": "./dist-node",
-    "noEmit": true
+    "emitDeclarationOnly": true // Again, emit only declarations
   },
   "include": ["src"]
 }
